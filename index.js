@@ -19,7 +19,7 @@ export default {
 
       // Кодируем JSON в строку и добавляем в конец URL
       const encoded = encodeURIComponent(JSON.stringify(payload));
-      const targetUrl = `${env.DISCORD_WEBHOOK_URL}${encoded}`;
+      const targetUrl = `${env.DISCORD}${encoded}`;
 
       const res = await fetch(targetUrl, { method: 'GET' });
 
